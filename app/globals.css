@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #00ff8c;
+  --color-ink: #111111;
+
+  --animate-drift-left: drift-left 25s linear infinite;
+  --animate-drift-right: drift-right 25s linear infinite;
+}
+
+/* Font utilities — reference Next.js font CSS vars injected on <html> */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-boldonse), sans-serif;
+  }
+  .font-body {
+    font-family: var(--font-newsreader), serif;
+  }
+}
+
+@keyframes drift-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes drift-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift-left,
+  .animate-drift-right {
+    animation: none;
+  }
+}
