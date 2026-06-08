@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Boldonse, Newsreader } from 'next/font/google'
+import { Boldonse, Newsreader, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { TypeBackground } from '@/components/TypeBackground'
 
@@ -18,19 +18,32 @@ const newsreader = Newsreader({
   display: 'swap',
 })
 
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-ibm-plex-mono',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'Tibormade',
+  title: 'TIBORMADE',
   description:
     'Audio-visual creative practice of British-Hungarian commercial designer and sound artist Tibor Miklos',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${boldonse.variable} ${newsreader.variable}`}>
-      {/*
-        bg-brand-green on body so the fixed background colour shows
-        during any brief paint before the TypeBackground renders.
-      */}
+    <html
+      lang="en"
+      className={`${boldonse.variable} ${newsreader.variable} ${ibmPlexMono.variable}`}
+    >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0"
+        />
+      </head>
       <body className="bg-brand-green overflow-x-hidden">
         <TypeBackground />
         <main className="relative z-10">

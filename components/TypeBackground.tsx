@@ -1,64 +1,107 @@
+'use client'
+
 /**
  * TypeBackground
  *
  * Fixed full-viewport typographic texture.
  * Renders 15 rows of offset TIBORMADE text (each row shifts the string
- * by one character). Alternate rows drift in opposite directions via
- * pure CSS animations — no JS, GPU-composited, works on all screen sizes.
+ * by one character). Alternate rows drift in opposite directions.
  *
- * Marquee math:
- *   Each row contains 4 words (2 per "copy") × 2 copies = 8 words total.
- *   translateX(-50%) shifts by exactly one copy (4 words ≈ 400vw).
- *   Since copy 1 === copy 2, the loop is seamless.
- *   Rows are staggered with negative animation-delay so they start at
- *   different positions throughout the 25s cycle.
+ * Scroll-driven playback:
+ *   - Scroll down → reverse (negative playbackRate)
+ *   - Scroll up   → speed up forward
+ *   - Idle 250ms  → return to normal rate (1)
+ *   Rate is lerp'd each frame for smooth easing.
  */
 
+import { useEffect } from 'react'
+
 const BASE = 'TIBORMADE'
+const ROWS = 15
+const WORDS_PER_ROW = 8
+const DELAY_STEP = 25 / ROWS
 
 function rotate(str: string, n: number): string {
   const i = n % str.length
   return str.slice(i) + str.slice(0, i)
 }
 
-// 15 rows covers even the tallest mobile portrait viewport
-// (each row is ~19vw tall; 15 × 19vw = 285vw, always > 100vh)
-const ROWS = Array.from({ length: 15 }, (_, i) => rotate(BASE, i))
-
-// Evenly distribute start positions across the 25s animation cycle
-const DELAY_STEP = 25 / 15
+const rowData = Array.from({ length: ROWS }, (_, i) => ({
+  word: rotate(BASE, i),
+  isEven: i % 2 === 0,
+  delay: `${-(i * DELAY_STEP).toFixed(2)}s`,
+}))
 
 export function TypeBackground() {
-  return (
-    <div
-      className="fixed inset-0 z-0 overflow-hidden bg-brand-green pointer-events-none select-none"
-      aria-hidden="true"
-    >
-      {ROWS.map((text, i) => {
-        const isEven = i % 2 === 0
-        // 4 words per copy × 2 copies = 8 words total, seamless at -50%
-        const rowWords = Array.from({ length: 8 }, () => text)
+  useEffect(() => {
+    // Collect WAAPI animations after two frames (so CSS animations have started)
+    let animations: Animation[] = []
+    let targetRate = 1
+    let currentRate = 1
+    let lastY = window.scrollY
+    let lastT = performance.now()
+    let idleTimer: ReturnType<typeof setTimeout> | null = null
+    let rafId: number
 
-        return (
-          <div key={i} className="overflow-hidden">
-            <div
-              className={`flex will-change-transform ${
-                isEven ? 'animate-drift-left' : 'animate-drift-right'
-              }`}
-              style={{ animationDelay: `${-(i * DELAY_STEP).toFixed(2)}s` }}
-            >
-              {rowWords.map((word, j) => (
-                <span
-                  key={j}
-                  className="font-display text-ink text-[15.3vw] leading-[1.25] tracking-[-0.04em] shrink-0 pr-[0.12em]"
-                >
-                  {word}
-                </span>
-              ))}
-            </div>
+    const rAF1 = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.querySelectorAll<HTMLElement>('.type-track').forEach(el => {
+          animations.push(...el.getAnimations())
+        })
+      })
+    })
+
+    function onScroll() {
+      const now = performance.now()
+      const y = window.scrollY
+      const delta = y - lastY
+      const dt = Math.max(1, now - lastT)
+      const vel = Math.max(-2, Math.min(2, delta / dt))
+
+      if (vel > 0) {
+        targetRate = -(1 + vel * 6)
+      } else if (vel < 0) {
+        targetRate = 1 + -vel * 6
+      }
+
+      lastY = y
+      lastT = now
+
+      if (idleTimer) clearTimeout(idleTimer)
+      idleTimer = setTimeout(() => { targetRate = 1 }, 250)
+    }
+
+    function loop() {
+      currentRate += (targetRate - currentRate) * 0.07
+      animations.forEach(a => { a.playbackRate = currentRate })
+      rafId = requestAnimationFrame(loop)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    rafId = requestAnimationFrame(loop)
+
+    return () => {
+      cancelAnimationFrame(rAF1)
+      cancelAnimationFrame(rafId)
+      window.removeEventListener('scroll', onScroll)
+      if (idleTimer) clearTimeout(idleTimer)
+    }
+  }, [])
+
+  return (
+    <div className="type-bg" aria-hidden="true">
+      {rowData.map(({ word, isEven, delay }, i) => (
+        <div key={i} className="type-row">
+          <div
+            className={`type-track ${isEven ? 'drift-left' : 'drift-right'}`}
+            style={{ animationDelay: delay }}
+          >
+            {Array.from({ length: WORDS_PER_ROW }, (_, j) => (
+              <span key={j} className="type-word">{word}</span>
+            ))}
           </div>
-        )
-      })}
+        </div>
+      ))}
     </div>
   )
 }
