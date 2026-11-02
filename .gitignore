@@ -21,3 +21,6 @@ package-lock.json
 !/library/**/
 !/library/**/.gitkeep
 !/library/README.md
+
+# Built copies of past live versions (source is kept as git tags)
+/archive/
