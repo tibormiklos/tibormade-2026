@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://tibormade.com'),
   title: 'TIBORMADE',
   description:
-    'Audio-visual creative practice of British-Hungarian designer and sound artist Tibor Miklós.',
+    'British-Hungarian sound and visual artist Tibor Miklós: compositions made for specific places, and listening experiences that bring them back there.',
   alternates: { types: { 'text/markdown': '/tibor.md' } },
 }
 

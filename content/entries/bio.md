@@ -18,14 +18,18 @@ links:
     href: mailto:tibor@tibormade.com
 ---
 
-Tibor is a British-Hungarian audio visual artist based on the Isle of Man, for whom working as a designer and a sound artist are not separate careers but two expressions of the same inner process.
+Tibor Miklós is a British-Hungarian sound and visual artist based on the Isle of Man. His work starts with listening to a place for long enough that it starts talking back.
 
-His approach is unhurried by nature, not circumstance. Ideas are allowed to settle, to pass through a filter, and to surface in their own time. What comes out the other side tends to be simpler than what went in, and more alive. This is where the inspiration and new solutions come from. Not from forcing, but from waiting until the right thing arrives.
+Most of what he makes now is one of two things.
 
-Working as a designer, this looks like bringing genuine clarity to complex problems. Tibor works with global brands across technology, automotive, and fintech, building digital products and brand identities that feel whole and considered rather than assembled from parts, attentive to structure, tone, and the small decisions that separate something considered from something merely finished.
+The first is composition for a specific place. A building or a landscape becomes the instrument: the sounds found inside it, the materials it is made from, and its acoustic signature, the way it holds and returns whatever is played into it. Everything is gathered on site and shaped by the place it came from. The *Organism* series began in the Methodist chapel at Agneash, built from its harmonium, pews, footsteps and air, and continued at St Maughold's Church with *Layers*.
 
-Working with sound, the same instinct applies. Sound comes before music. A particular colour, timbre, or the smallest indication of rhythm can become a gateway into a piece or composition. Tibor moves across sonic identity, installation, and collaborative performance, composing for digital products and film, performing live scores, and releasing work under his own name and through a number of long-running collaborations that stretch from ambient and electronic to improvised and experimental forms.
+The second is the listening experience. The finished work goes back to where it was made and plays there, so people can sit inside the building and hear it as it was composed. There is often no fixed beginning or end; people come in, stay as long as they like, and leave.
 
-Both ask the same question: what does it feel like to be inside the work? The answer is always arrived at the same way, patiently, and from the inside out.
+He works as simply as he can: a field recorder, a modular synth, a film camera, pen and ink. Sound comes before music. A particular colour, a timbre, the smallest hint of rhythm can be the way into a piece. Ideas are left to settle and surface in their own time, and what comes out tends to be simpler than what went in, and more alive.
 
-He carries a distinctly European outlook into everything he makes, and works with the unhurried focus of a life artist from a small island in the Irish Sea.
+Images run alongside the sound. He makes the artwork for his releases and photographs the places he records in, with the same attention he gives to listening.
+
+He also performs: live film scores with Kitterland, improvised electronics with Busy Lady, and solo sets on modular.
+
+He carries a European outlook into a practice rooted on a small island in the Irish Sea.
