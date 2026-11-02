@@ -5,7 +5,12 @@ function Row({ entry }: { entry: Entry }) {
   return (
     <>
       <span className="entry-title">{entry.title}</span>
-      {entry.kind && <span className="entry-kind">{entry.kind}</span>}
+      {entry.kind && (
+        <span className="entry-kind">
+          {entry.kind}
+          {entry.year && `, ${entry.year}`}
+        </span>
+      )}
     </>
   )
 }
@@ -26,7 +31,6 @@ function Body({ entry }: { entry: Entry }) {
                     {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
                   >
                     {link.label}
-                    {external && ' ↗'}
                   </a>
                 </li>
               )

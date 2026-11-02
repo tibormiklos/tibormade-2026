@@ -18,6 +18,7 @@ export interface Entry {
   title: string
   pageTitle: string
   kind: string
+  year: string
   images: EntryImage[]
   html: string
   links: EntryLink[]
@@ -41,18 +42,23 @@ function readEntry(file: string) {
   const images: EntryImage[] = (data.images ?? [])
     .filter((i: Partial<EntryImage>) => i.src)
     .map((i: EntryImage) => ({ src: withBasePath(i.src), alt: i.alt ?? title }))
+  // YAML turns full dates (2026-05-08) into Date objects but leaves 2026-05 as text.
+  const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? '')
+  // The year shown after the kind; `year:` overrides it (a range, or blank to hide it).
+  const year = data.year === undefined ? date.slice(0, 4) : String(data.year ?? '')
+  const html = body ? (marked.parse(body, { breaks: true, async: false }) as string) : ''
   const entry: Entry = {
     slug: file.replace(/\.md$/, ''),
     title,
     pageTitle: title.toUpperCase() === SITE ? `${SITE} — ${kind}` : `${title} — ${SITE}`,
     kind,
+    year,
     images,
-    html: body ? (marked.parse(body, { breaks: true, async: false }) as string) : '',
+    // External links in the copy open in a new tab, like the links list.
+    html: html.replace(/<a href="http/g, '<a target="_blank" rel="noopener noreferrer" href="http'),
     links,
     hasContent: Boolean(body || images.length || links.length),
   }
-  // YAML turns full dates (2026-05-08) into Date objects but leaves 2026-05 as text.
-  const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? '')
   return { entry, pinned: Boolean(data.pinned), date }
 }
 

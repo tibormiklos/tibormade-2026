@@ -2,6 +2,7 @@
 title: Landscapes with Busy Lady
 kind: 1020 Radio residency
 date: 2020-01
+year: 2019–2022
 images:
   - src: /entries/landscapes-busy-lady/landscapes-1.jpg
     alt: A moss-covered concrete wall and doorway in woodland

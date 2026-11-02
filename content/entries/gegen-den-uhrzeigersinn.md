@@ -2,6 +2,7 @@
 title: "Gegen den Uhrzeigersinn"
 kind: Berlin Ringbahn soundtrack
 date: 2018-11
+year:
 images:
   - src: /entries/gegen-den-uhrzeigersinn/gegen-den-uhrzeigersinn.gif
     alt: Gegen den Uhrzeigersinn — cover

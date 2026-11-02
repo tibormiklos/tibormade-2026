@@ -143,6 +143,16 @@ summary.entry-row:focus-visible {
   font-size: var(--size-label);
 }
 
+/* Every link reads the same, in the copy or the links list. External ones get the arrow. */
+.entry-body a {
+  font-style: italic;
+}
+
+.entry-body a[href^="http"]::after {
+  content: " ↗";
+  font-style: normal;
+}
+
 @media (max-width: 768px) {
   :root {
     --size-text: 20px;
