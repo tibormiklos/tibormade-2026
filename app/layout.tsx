@@ -24,7 +24,7 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tibormade.com'),
-  title: 'tibormade',
+  title: 'TIBORMADE',
   description:
     'Audio-visual creative practice of British-Hungarian designer and sound artist Tibor Miklós.',
   alternates: { types: { 'text/markdown': '/tibor.md' } },

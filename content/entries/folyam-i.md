@@ -3,7 +3,7 @@ title: Folyam I.
 kind: EP with Jeff Jepson
 date: 2025-03
 images:
-  - src: https://cdn.prod.website-files.com/67f0e8f919c70b8c5912fb1c/6887e0008dcfa44868b80f15_folyam.jpg
+  - src: /entries/folyam-i/folyam-i.jpg
     alt: Folyam I. — J Jepson & T Miklós
 links:
   - label: Apple Music

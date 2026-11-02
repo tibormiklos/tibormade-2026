@@ -2,6 +2,15 @@
 title: "Kitterland supports Portico Quartet"
 kind: Live
 date: 2025-09-13
+images:
+  - src: /entries/kitterland-portico-quartet/portico-1.jpg
+    alt: Kitterland on stage at the Kings Court Theatre
+  - src: /entries/kitterland-portico-quartet/portico-2.jpg
+    alt: Kitterland seen over the audience
+  - src: /entries/kitterland-portico-quartet/portico-3.jpg
+    alt: Kitterland playing in front of the screen
+  - src: /entries/kitterland-portico-quartet/portico-4.jpg
+    alt: "Poster: Portico Quartet, Kitterland and Soundology, 13 September 2025"
 links:
   - label: Isle of Man Today
     href: https://www.iomtoday.co.im/news/entertainment/portico-quartet-to-headline-concert-presented-by-waves-of-wonder-initiative-807922

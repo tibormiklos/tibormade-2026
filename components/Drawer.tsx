@@ -31,7 +31,7 @@ export function Drawer({ slug, title, defaultOpen, summary, children }: Props) {
       })
     } else if (location.pathname === own) {
       history.replaceState(null, '', `${basePath}/`)
-      document.title = 'tibormade'
+      document.title = 'TIBORMADE'
     }
   }
 

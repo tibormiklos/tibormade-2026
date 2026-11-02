@@ -2,6 +2,9 @@
 title: Boxes (Live)
 kind: Live album
 date: 2025-12
+images:
+  - src: /entries/boxes-live/boxes-live.jpg
+    alt: Boxes (Live) — cover
 links:
   - label: Apple Music
     href:

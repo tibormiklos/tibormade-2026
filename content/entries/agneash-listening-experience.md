@@ -2,6 +2,9 @@
 title: Agneash Listening Experience
 kind: Sound installation
 date: 2025-08
+images:
+  - src: /entries/agneash-listening-experience/agneash-listening-experience.jpg
+    alt: Agneash Listening Experience
 ---
 
 *Agneash* is the first work in the **Organism** series: site-specific compositions that explore architecture as a living instrument and places as collaborators.

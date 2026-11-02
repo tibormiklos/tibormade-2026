@@ -24,7 +24,7 @@ export interface Entry {
   hasContent: boolean
 }
 
-const SITE = 'tibormade'
+const SITE = 'TIBORMADE'
 const dir = path.join(process.cwd(), 'content/entries')
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -44,7 +44,7 @@ function readEntry(file: string) {
   const entry: Entry = {
     slug: file.replace(/\.md$/, ''),
     title,
-    pageTitle: title.toLowerCase() === SITE ? `${SITE} — ${kind}` : `${title} — ${SITE}`,
+    pageTitle: title.toUpperCase() === SITE ? `${SITE} — ${kind}` : `${title} — ${SITE}`,
     kind,
     images,
     html: body ? (marked.parse(body, { breaks: true, async: false }) as string) : '',
