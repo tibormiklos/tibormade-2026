@@ -144,8 +144,16 @@ summary.entry-row:focus-visible {
 }
 
 /* Every link reads the same, in the copy or the links list. External ones get the arrow. */
-.entry-body a {
+.entry-body a,
+.not-found a {
   font-style: italic;
+}
+
+.not-found {
+  display: grid;
+  gap: var(--space);
+  padding: var(--space);
+  font-size: var(--size-text);
 }
 
 .entry-body a[href^="http"]::after {

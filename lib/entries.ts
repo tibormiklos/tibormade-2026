@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
+import { imageSize } from 'image-size'
 
 export interface EntryLink {
   label: string
@@ -11,6 +12,8 @@ export interface EntryLink {
 export interface EntryImage {
   src: string
   alt: string
+  width?: number
+  height?: number
 }
 
 export interface Entry {
@@ -33,6 +36,18 @@ function withBasePath(src: string) {
   return src.startsWith('/') ? `${basePath}${src}` : src
 }
 
+// Pixel size of an image in public/, so the browser can reserve its space before it loads
+// and the share tags can state it. Remote images are left unmeasured.
+function measure(src: string): Pick<EntryImage, 'width' | 'height'> {
+  if (!src.startsWith('/')) return {}
+  try {
+    const { width, height } = imageSize(fs.readFileSync(path.join(process.cwd(), 'public', src)))
+    return { width, height }
+  } catch {
+    return {}
+  }
+}
+
 function readEntry(file: string) {
   const { data, content } = matter(fs.readFileSync(path.join(dir, file), 'utf8'))
   const body = content.trim()
@@ -41,7 +56,7 @@ function readEntry(file: string) {
   const links: EntryLink[] = (data.links ?? []).filter((l: EntryLink) => l.href)
   const images: EntryImage[] = (data.images ?? [])
     .filter((i: Partial<EntryImage>) => i.src)
-    .map((i: EntryImage) => ({ src: withBasePath(i.src), alt: i.alt ?? title }))
+    .map((i: EntryImage) => ({ src: withBasePath(i.src), alt: i.alt ?? title, ...measure(i.src) }))
   // YAML turns full dates (2026-05-08) into Date objects but leaves 2026-05 as text.
   const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? '')
   // The year shown after the kind; `year:` overrides it (a range, or blank to hide it).

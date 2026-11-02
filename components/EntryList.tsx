@@ -1,10 +1,12 @@
 import { getEntries, type Entry } from '@/lib/entries'
 import { Drawer } from './Drawer'
 
-function Row({ entry }: { entry: Entry }) {
+type Heading = 'h1' | 'h2'
+
+function Row({ entry, heading: Heading }: { entry: Entry; heading: Heading }) {
   return (
     <>
-      <span className="entry-title">{entry.title}</span>
+      <Heading className="entry-title">{entry.title}</Heading>
       {entry.kind && (
         <span className="entry-kind">
           {entry.kind}
@@ -42,7 +44,15 @@ function Body({ entry }: { entry: Entry }) {
         <div className="entry-media">
           {entry.images.map((image) => (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              loading="lazy"
+              decoding="async"
+            />
           ))}
         </div>
       )}
@@ -51,27 +61,33 @@ function Body({ entry }: { entry: Entry }) {
 }
 
 export function EntryList({ openSlug }: { openSlug?: string }) {
+  const entries = getEntries()
+  // The page's subject is its h1: the open entry, or the bio at the top of the home page.
+  const h1 = openSlug ?? entries[0]?.slug
   return (
     <main>
       <ul className="entries">
-        {getEntries().map((entry) => (
-          <li key={entry.slug}>
-            {entry.hasContent ? (
-              <Drawer
-                slug={entry.slug}
-                title={entry.pageTitle}
-                defaultOpen={entry.slug === openSlug}
-                summary={<Row entry={entry} />}
-              >
-                <Body entry={entry} />
-              </Drawer>
-            ) : (
-              <div className="entry-row">
-                <Row entry={entry} />
-              </div>
-            )}
-          </li>
-        ))}
+        {entries.map((entry) => {
+          const heading: Heading = entry.slug === h1 ? 'h1' : 'h2'
+          return (
+            <li key={entry.slug}>
+              {entry.hasContent ? (
+                <Drawer
+                  slug={entry.slug}
+                  title={entry.pageTitle}
+                  defaultOpen={entry.slug === openSlug}
+                  summary={<Row entry={entry} heading={heading} />}
+                >
+                  <Body entry={entry} />
+                </Drawer>
+              ) : (
+                <div className="entry-row">
+                  <Row entry={entry} heading={heading} />
+                </div>
+              )}
+            </li>
+          )
+        })}
       </ul>
     </main>
   )
