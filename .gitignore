@@ -16,3 +16,8 @@ node_modules/
 # Debug
 npm-debug.log*
 package-lock.json
+# Image library: originals stay local, only the folders are tracked
+/library/**
+!/library/**/
+!/library/**/.gitkeep
+!/library/README.md

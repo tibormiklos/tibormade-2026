@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 
 const LIFE = 2400 // ms a point of the trail lives
 const DOT = 10 // dot diameter, also the trail's starting width
+const DOT_LINK = 18 // dot diameter over a link
 const INK = 17 // #111
 
 interface Point {
@@ -28,6 +29,8 @@ export function CursorTrail() {
     const root = document.documentElement
     let points: Point[] = []
     let pos: Point | null = null
+    let size = DOT
+    let sizeTarget = DOT
     let frame = 0
 
     function resize() {
@@ -55,13 +58,16 @@ export function CursorTrail() {
         ctx!.lineTo(b.x, b.y)
         ctx!.stroke()
       }
+      // Ease the dot toward its target size.
+      size += (sizeTarget - size) * 0.25
+      if (Math.abs(sizeTarget - size) < 0.1) size = sizeTarget
       if (pos) {
         ctx!.fillStyle = `rgb(${INK},${INK},${INK})`
         ctx!.beginPath()
-        ctx!.arc(pos.x, pos.y, DOT / 2, 0, Math.PI * 2)
+        ctx!.arc(pos.x, pos.y, size / 2, 0, Math.PI * 2)
         ctx!.fill()
       }
-      frame = points.length > 1 ? requestAnimationFrame(draw) : 0
+      frame = points.length > 1 || size !== sizeTarget ? requestAnimationFrame(draw) : 0
     }
 
     function schedule() {
@@ -72,6 +78,7 @@ export function CursorTrail() {
       if (e.pointerType !== 'mouse') return
       const now = performance.now()
       pos = { x: e.clientX, y: e.clientY, t: now }
+      sizeTarget = (e.target as Element).closest?.('a') ? DOT_LINK : DOT
       if (trail) {
         // Coalesced events keep fast strokes smooth instead of straight-edged.
         const events = e.getCoalescedEvents?.() ?? []

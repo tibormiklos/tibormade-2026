@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Arimo, Newsreader } from 'next/font/google'
 import { CursorTrail } from '@/components/CursorTrail'
+import { PulsingIcon } from '@/components/PulsingIcon'
 import './globals.css'
 
 // Helvetica Neue isn't licensed for web embedding, so the stack asks for the
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <CursorTrail />
+        <PulsingIcon />
       </body>
     </html>
   )
