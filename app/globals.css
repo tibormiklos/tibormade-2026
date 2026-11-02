@@ -127,7 +127,7 @@ a { color: var(--color-ink); }
 
 /* Shared line-height for all Boldonse elements */
 .t-display, .t-stream-tag, .t-embed-title, .t-year-label,
-.t-item-title, .t-collab-name, .t-footer-brand,
+.t-item-title, .t-collab-name,
 .t-footer-link, .t-robots-label, .t-tile-action {
   line-height: 1.35em;
 }
@@ -254,19 +254,28 @@ a { color: var(--color-ink); }
 }
 
 .item-link {
+  position: relative;
+  isolation: isolate;
   color: #111111;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  transition: text-decoration-color 0.15s ease;
 }
 
-.item-link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-brand-green);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.33em;
+.item-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand-green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+}
+
+.item-link:hover::before {
+  transform: scaleY(1);
 }
 
 .ext-icon {
@@ -307,17 +316,21 @@ a { color: var(--color-ink); }
   font-family: var(--font-body);
   font-size: 18px;
   color: var(--color-ink);
-  transition: filter 0.15s ease;
+  transition: background-color 0.2s ease-out;
 }
 
-.green-tile:hover { filter: brightness(0.92); }
+.green-tile:hover { background-color: color-mix(in srgb, var(--color-brand-green) 85%, #000); }
 
 .t-tile-action {
   font-family: var(--font-display);
   font-size: 12px;
   letter-spacing: 0;
   color: var(--color-ink);
+  display: inline-block;
+  transition: transform 0.2s ease-out;
 }
+
+.green-tile:hover .t-tile-action { transform: translateX(4px); }
 
 /* ─── Collaboration ────────────────────────────────────────────────────────── */
 
@@ -361,6 +374,43 @@ a { color: var(--color-ink); }
   text-transform: uppercase;
   margin: 0 0 60px;
   color: #111111;
+}
+
+.robots-download-link {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  margin: -6px -10px 54px;
+}
+
+.robots-download-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand-green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+}
+
+.robots-download-link:hover::before {
+  transform: scaleY(1);
+}
+
+.robots-download-link:hover,
+.robots-download-link:hover * {
+  color: #111111 !important;
+}
+
+.robots-download-link .material-symbols-outlined {
+  font-size: 16px;
+  font-variation-settings: 'opsz' 20, 'wght' 300;
 }
 
 .robots-content {
@@ -411,10 +461,12 @@ a { color: var(--color-ink); }
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
 }
 
 .t-footer-link {
+  position: relative;
+  isolation: isolate;
   font-family: var(--font-display);
   font-size: 36px;
   letter-spacing: 0;
@@ -425,22 +477,235 @@ a { color: var(--color-ink); }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: text-decoration-color 0.15s ease;
+  padding: 6px 10px;
+  margin: -6px -10px;
+  align-self: flex-start;
 }
 
-.t-footer-link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-brand-green);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.33em;
+.t-footer-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand-green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
 }
 
-.t-footer-brand {
-  font-family: var(--font-display);
+.t-footer-link:hover::before {
+  transform: scaleY(1);
+}
+
+/* ─── Project modal ────────────────────────────────────────────────────────── */
+
+.more-info-trigger {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  color: #111111;
+}
+
+.more-info-trigger::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand-green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+}
+
+.more-info-trigger:hover::before {
+  transform: scaleY(1);
+}
+
+.more-info-trigger .material-symbols-outlined {
+  font-size: 18px;
+  font-variation-settings: 'opsz' 20, 'wght' 300;
+}
+
+dialog.project-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border: none;
+  padding: 0;
+  max-width: 560px;
+  width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #111111;
+  text-transform: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 12px)) scale(0.98);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    overlay 0.25s allow-discrete,
+    display 0.25s allow-discrete;
+}
+
+dialog.project-modal[open] {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@starting-style {
+  dialog.project-modal[open] {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 12px)) scale(0.98);
+  }
+}
+
+dialog.project-modal::backdrop {
+  background: color-mix(in srgb, var(--color-brand-green) 0%, transparent);
+  transition:
+    background-color 0.25s ease,
+    overlay 0.25s allow-discrete,
+    display 0.25s allow-discrete;
+}
+
+dialog.project-modal[open]::backdrop {
+  background: color-mix(in srgb, var(--color-brand-green) 65%, transparent);
+}
+
+@starting-style {
+  dialog.project-modal[open]::backdrop {
+    background: color-mix(in srgb, var(--color-brand-green) 0%, transparent);
+  }
+}
+
+.project-modal-inner {
+  position: relative;
+  padding: 40px;
+}
+
+.project-modal-close {
+  position: absolute;
+  isolation: isolate;
+  top: 20px;
+  right: 20px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal-close::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand-green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+}
+
+.project-modal-close:hover::before {
+  transform: scaleY(1);
+}
+
+.project-modal-close .material-symbols-outlined {
   font-size: 24px;
-  letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 24, 'wght' 300;
+}
+
+.t-modal-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  margin: 0 0 8px;
+  padding-right: 32px;
+  color: #111111;
+}
+
+.t-modal-meta {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 14px;
+  color: #555555;
+  margin: 0 0 24px;
+}
+
+.t-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.t-modal-body p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #111111;
+}
+
+.modal-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.modal-credits-label {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   color: #111111;
   margin: 0;
+}
+
+.modal-credit-role {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 14px;
+  color: #555555;
+  margin: 0 0 2px;
+}
+
+.modal-credit-name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: #111111;
+  margin: 0;
+}
+
+.modal-copyright {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #888888;
+  margin: 8px 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog.project-modal,
+  dialog.project-modal::backdrop {
+    transition: none;
+  }
 }
 
 /* ─── Responsive ───────────────────────────────────────────────────────────── */
