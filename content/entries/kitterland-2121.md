@@ -10,4 +10,6 @@ links:
     href: https://youtu.be/x7MnYzisUX0
 ---
 
-Kitterland is an audio-visual collective with Joff Whitten, making improvised music for film. *2121* was released in 2023, followed by live scores for Zabriskie Point and Mad Max.
+*2121* is Kitterland's first film: a live, improvised set recorded at the Sound Café, set against views of the Isle of Man from sunrise to sunset. Released in 2023, it has been screened across the island and beyond.
+
+Kitterland is Tibor Miklós and Joff Whitten, working with filmmaker Anthony Dalton, making improvised cinematic music with analogue synths, looping pedals, guitars and voice.

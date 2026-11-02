@@ -21,9 +21,14 @@ export function Drawer({ slug, title, defaultOpen, summary, children }: Props) {
 
   function onToggle(e: React.SyntheticEvent<HTMLDetailsElement>) {
     const own = `${basePath}/${slug}/`
-    if (e.currentTarget.open) {
+    const el = e.currentTarget
+    if (el.open) {
       history.replaceState(null, '', own)
       document.title = title
+      // Closing a longer drawer above this one pulls it upward, sometimes off screen.
+      requestAnimationFrame(() => {
+        if (el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' })
+      })
     } else if (location.pathname === own) {
       history.replaceState(null, '', `${basePath}/`)
       document.title = 'tibormade'
@@ -31,7 +36,14 @@ export function Drawer({ slug, title, defaultOpen, summary, children }: Props) {
   }
 
   return (
-    <details ref={ref} id={slug} className="entry" open={defaultOpen} onToggle={onToggle}>
+    <details
+      ref={ref}
+      id={slug}
+      name="entry"
+      className="entry"
+      open={defaultOpen}
+      onToggle={onToggle}
+    >
       <summary className="entry-row">{summary}</summary>
       {children}
     </details>

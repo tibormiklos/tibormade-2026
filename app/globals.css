@@ -5,6 +5,7 @@
   --bg: #fff6d8;
   --ink: #111111;
   --rule: #d6ceb2;
+  --paper: #ffffff;
   --font-display: "Helvetica Neue", Helvetica, var(--font-arimo), Arial, sans-serif;
   --font-text: var(--font-newsreader), Georgia, serif;
   --size-title: clamp(30px, 5.16vw, 66px);
@@ -79,12 +80,16 @@ summary.entry-row::-webkit-details-marker {
   display: none;
 }
 
+.entry[open] {
+  background: var(--paper);
+}
+
 summary.entry-row::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--rule);
+  background: var(--paper);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.2s ease-out;

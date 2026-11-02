@@ -51,7 +51,9 @@ function readEntry(file: string) {
     links,
     hasContent: Boolean(body || images.length || links.length),
   }
-  return { entry, pinned: Boolean(data.pinned), date: String(data.date ?? '') }
+  // YAML turns full dates (2026-05-08) into Date objects but leaves 2026-05 as text.
+  const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? '')
+  return { entry, pinned: Boolean(data.pinned), date }
 }
 
 export function getEntries(): Entry[] {
