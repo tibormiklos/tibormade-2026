@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!entry) return {}
   const description = summarise(entry.html) || entry.kind
   return {
-    title: `${entry.title} — tibormade`,
+    title: entry.pageTitle,
     description,
     alternates: { canonical: `/${entry.slug}/` },
     openGraph: {
-      title: entry.title,
+      title: entry.pageTitle,
       description,
-      ...(entry.image && { images: [entry.image] }),
+      ...(entry.images[0] && { images: [entry.images[0].src] }),
     },
   }
 }

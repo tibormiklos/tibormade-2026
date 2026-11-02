@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Arimo } from 'next/font/google'
+import { Arimo, Newsreader } from 'next/font/google'
 import './globals.css'
 
 // Helvetica Neue isn't licensed for web embedding, so the stack asks for the
@@ -12,6 +12,14 @@ const arimo = Arimo({
   preload: false,
 })
 
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-newsreader',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://tibormade.com'),
   title: 'tibormade',
@@ -22,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={arimo.variable}>
+    <html lang="en" className={`${arimo.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   )

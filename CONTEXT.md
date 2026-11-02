@@ -4,10 +4,11 @@ Personal portfolio site (tibormade.com). Next.js 15 static export (`output: 'exp
 
 ## Shape (redesign-list branch, Nov 2026)
 - One long list of projects on a yellow background, modelled on the MUDE Lisbon newsletter. Bio is the first item. Every item is a closed drawer.
-- Each entry is a markdown file in `content/entries/` — frontmatter (`title`, `kind`, `date`, `image`, `imageAlt`, `links`) plus body text. Filename = URL slug. List order = `date` descending; `pinned: true` sits on top.
+- Each entry is a markdown file in `content/entries/` — frontmatter (`title`, `kind`, `date`, `images`, `links`) plus body text. Filename = URL slug. List order = `date` descending; `pinned: true` sits on top.
 - An entry with no body, image or links renders as a plain row; adding any of them turns it into a drawer with its own URL (`/slug/`), generated at build time.
 - Opening a drawer rewrites the URL and tab title in place; loading `/slug/` directly opens that drawer.
-- Type: system Helvetica Neue, falling back to Arimo (Google Fonts). Colour/size tokens in `app/globals.css` are placeholders until matched to the Figma frame.
+- Type: titles in system Helvetica Neue Medium (Arimo fallback), labels and body in Newsreader. Tokens in `app/globals.css` match Figma frame 452:583.
+- Images: `images:` list in frontmatter (`src`, `alt`), stacked in the right-hand column.
 
 ## Files
 - `lib/entries.ts` — reads and renders the markdown

@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
-/* Placeholder values until matched against the Figma frame. */
+/* Tokens from Figma: Tibormade-2026, frame 452:583 */
 :root {
-  --bg: #ffe14d;
-  --ink: #000000;
-  --font: "Helvetica Neue", Helvetica, var(--font-arimo), Arial, sans-serif;
-  --size: clamp(20px, 2.4vw, 32px);
-  --size-body: 18px;
-  --gutter: clamp(16px, 2.5vw, 32px);
+  --bg: #fff6d8;
+  --ink: #111111;
+  --rule: #d6ceb2;
+  --font-display: "Helvetica Neue", Helvetica, var(--font-arimo), Arial, sans-serif;
+  --font-text: var(--font-newsreader), Georgia, serif;
+  --size-title: clamp(30px, 5.16vw, 66px);
+  --size-text: 24px;
+  --size-label: 18px;
+  --space: 20px;
+  --max: 1280px;
 }
 
 html,
@@ -18,9 +22,7 @@ body {
 
 body {
   color: var(--ink);
-  font-family: var(--font);
-  font-size: var(--size);
-  line-height: 1.15;
+  font-family: var(--font-text);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,36 +30,42 @@ a {
   color: inherit;
 }
 
-.site-header {
-  padding: var(--gutter) var(--gutter) 0.6em;
-}
-
-.site-header a {
-  text-decoration: none;
-}
-
 .entries {
   list-style: none;
-  margin: 0;
+  max-width: var(--max);
+  margin: 0 auto;
   padding: 0;
-  border-top: 1px solid var(--ink);
 }
 
 .entries > li {
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
 }
 
 .entry-row {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1em;
-  padding: 0.3em var(--gutter);
+  align-items: center;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.entry-title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--size-title);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-box: trim-both cap alphabetic;
+  overflow-wrap: break-word;
 }
 
 .entry-kind {
   flex-shrink: 0;
-  text-align: right;
+  font-size: var(--size-label);
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 summary.entry-row {
@@ -65,7 +73,6 @@ summary.entry-row {
   isolation: isolate;
   cursor: pointer;
   list-style: none;
-  transition: color 0.2s ease-out;
 }
 
 summary.entry-row::-webkit-details-marker {
@@ -77,14 +84,10 @@ summary.entry-row::before {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--ink);
+  background: var(--rule);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.2s ease-out;
-}
-
-summary.entry-row:hover {
-  color: var(--bg);
 }
 
 summary.entry-row:hover::before {
@@ -98,25 +101,32 @@ summary.entry-row:focus-visible {
 
 .entry-body {
   display: grid;
-  gap: 1.2em;
-  max-width: 44em;
-  padding: 0.6em var(--gutter) 1.6em;
-  font-size: var(--size-body);
-  line-height: 1.4;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: var(--space);
+  padding: var(--space);
+  font-size: var(--size-text);
+  line-height: 1.25;
+}
+
+.entry-copy,
+.entry-text {
+  display: grid;
+  gap: var(--size-text);
 }
 
 .entry-text p {
-  margin: 0 0 0.9em;
+  margin: 0;
 }
 
-.entry-text p:last-child {
-  margin-bottom: 0;
+.entry-media {
+  display: grid;
+  gap: var(--space);
 }
 
-.entry-image {
+.entry-media img {
   display: block;
   width: 100%;
-  max-width: 560px;
   height: auto;
 }
 
@@ -127,22 +137,26 @@ summary.entry-row:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25em 1.25em;
+  font-size: var(--size-label);
 }
 
-@media (max-width: 640px) {
-  .entry-row {
-    flex-direction: column;
-    gap: 0;
+@media (max-width: 768px) {
+  :root {
+    --size-text: 20px;
   }
 
-  .entry-kind {
-    text-align: left;
-    font-size: var(--size-body);
+  .entry-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .entry-body {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  summary.entry-row,
   summary.entry-row::before {
     transition: none;
   }

@@ -23,7 +23,7 @@ export function Drawer({ slug, title, defaultOpen, summary, children }: Props) {
     const own = `${basePath}/${slug}/`
     if (e.currentTarget.open) {
       history.replaceState(null, '', own)
-      document.title = `${title} — tibormade`
+      document.title = title
     } else if (location.pathname === own) {
       history.replaceState(null, '', `${basePath}/`)
       document.title = 'tibormade'

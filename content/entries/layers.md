@@ -2,8 +2,9 @@
 title: "Tibor x Maughold: Layers"
 kind: Album (coming soon)
 date: 2026-12
-image: /layers.jpg
-imageAlt: "Tibor x Maughold: Layers artwork"
+images:
+  - src: /layers.jpg
+    alt: "Tibor x Maughold: Layers artwork"
 links:
   - label: Apple Music
     href:

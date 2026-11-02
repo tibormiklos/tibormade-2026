@@ -8,17 +8,23 @@ export interface EntryLink {
   href: string
 }
 
+export interface EntryImage {
+  src: string
+  alt: string
+}
+
 export interface Entry {
   slug: string
   title: string
+  pageTitle: string
   kind: string
-  image?: string
-  imageAlt: string
+  images: EntryImage[]
   html: string
   links: EntryLink[]
   hasContent: boolean
 }
 
+const SITE = 'tibormade'
 const dir = path.join(process.cwd(), 'content/entries')
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -29,16 +35,21 @@ function withBasePath(src: string) {
 function readEntry(file: string) {
   const { data, content } = matter(fs.readFileSync(path.join(dir, file), 'utf8'))
   const body = content.trim()
+  const title: string = data.title
+  const kind: string = data.kind ?? ''
   const links: EntryLink[] = (data.links ?? []).filter((l: EntryLink) => l.href)
+  const images: EntryImage[] = (data.images ?? [])
+    .filter((i: Partial<EntryImage>) => i.src)
+    .map((i: EntryImage) => ({ src: withBasePath(i.src), alt: i.alt ?? title }))
   const entry: Entry = {
     slug: file.replace(/\.md$/, ''),
-    title: data.title,
-    kind: data.kind ?? '',
-    image: data.image ? withBasePath(data.image) : undefined,
-    imageAlt: data.imageAlt ?? data.title,
+    title,
+    pageTitle: title.toLowerCase() === SITE ? `${SITE} — ${kind}` : `${title} — ${SITE}`,
+    kind,
+    images,
     html: body ? (marked.parse(body, { breaks: true, async: false }) as string) : '',
     links,
-    hasContent: Boolean(body || data.image || links.length),
+    hasContent: Boolean(body || images.length || links.length),
   }
   return { entry, pinned: Boolean(data.pinned), date: String(data.date ?? '') }
 }

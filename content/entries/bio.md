@@ -1,8 +1,10 @@
 ---
-title: Bio
+title: tibormade
+kind: Bio
 pinned: true
-image: /tibor.jpg
-imageAlt: Tibor Miklós
+images:
+  - src: /tibor.jpg
+    alt: Tibor Miklós
 links:
   - label: Instagram
     href: https://www.instagram.com/tibormade/
