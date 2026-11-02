@@ -2,6 +2,13 @@
 title: "Tibor x Agneash: Organism I"
 kind: Album
 date: 2025-09
+images:
+  - src: /entries/agneash/agneash-1.jpg
+    alt: Inside Agneash Methodist Chapel, the pews facing the harmonium and pulpit
+  - src: /entries/agneash/agneash-2.jpg
+    alt: The chapel's open door, seen from between the pews
+  - src: /entries/agneash/agneash-3.jpg
+    alt: A hymn board and embroidered sampler on the chapel wall
 links:
   - label: Apple Music
     href:

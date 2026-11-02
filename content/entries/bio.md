@@ -12,8 +12,6 @@ links:
     href: https://tibor.bandcamp.com/
   - label: Soundcloud
     href: https://soundcloud.com/tbrmd/
-  - label: LinkedIn
-    href: https://www.linkedin.com/in/tibormiklos/
   - label: Email
     href: mailto:tibor@tibormade.com
 ---

@@ -5,6 +5,16 @@ date: 2026-12
 images:
   - src: /layers.jpg
     alt: "Tibor x Maughold: Layers artwork"
+  - src: /entries/layers/layers-1.jpg
+    alt: A microphone stand in the aisle of St Maughold's Church
+  - src: /entries/layers/layers-2.jpg
+    alt: A binaural dummy head recording in the nave of St Maughold's Church
+  - src: /entries/layers/layers-3.jpg
+    alt: The binaural head beside the organ pipes, under the skylight
+  - src: /entries/layers/layers-4.jpg
+    alt: A contact microphone fixed to a gravestone in the churchyard
+  - src: /entries/layers/layers-5.jpg
+    alt: Binaural microphones on a stone cross in the churchyard
 links:
   - label: Apple Music
     href:

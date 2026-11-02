@@ -2,6 +2,13 @@
 title: Maughold Listening Experience
 kind: Sound installation
 date: 2026-11
+images:
+  - src: /entries/maughold-listening-experience/maughold-1.jpg
+    alt: People listening in the pews of St Maughold's Church
+  - src: /entries/maughold-listening-experience/maughold-2.jpg
+    alt: The nave of St Maughold's Church, set up for the installation
+  - src: /entries/maughold-listening-experience/maughold-3.jpg
+    alt: Lichen on a weathered gravestone inscription in the churchyard
 ---
 
 *Layers* (Organism II) is a site-specific composition created for St Maughold's Church on the Isle of Man as part of Maughold Week 2026.
