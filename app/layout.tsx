@@ -1,55 +1,29 @@
 import type { Metadata } from 'next'
-import { Boldonse, Newsreader, IBM_Plex_Mono } from 'next/font/google'
+import { Arimo } from 'next/font/google'
 import './globals.css'
-import { TypeBackground } from '@/components/TypeBackground'
 
-const boldonse = Boldonse({
-  weight: '400',
+// Helvetica Neue isn't licensed for web embedding, so the stack asks for the
+// installed system copy first (macOS/iOS) and falls back to Arimo, which shares
+// Helvetica/Arial metrics.
+const arimo = Arimo({
   subsets: ['latin'],
-  variable: '--font-boldonse',
+  variable: '--font-arimo',
   display: 'swap',
-})
-
-const newsreader = Newsreader({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  variable: '--font-newsreader',
-  display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ['400'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  variable: '--font-ibm-plex-mono',
-  display: 'swap',
+  preload: false,
 })
 
 export const metadata: Metadata = {
-  title: 'TIBORMADE',
+  metadataBase: new URL('https://tibormade.com'),
+  title: 'tibormade',
   description:
-    'Audio-visual creative practice of British-Hungarian commercial designer and sound artist Tibor Miklos',
+    'Audio-visual creative practice of British-Hungarian designer and sound artist Tibor Miklós.',
+  alternates: { types: { 'text/markdown': '/tibor.md' } },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${boldonse.variable} ${newsreader.variable} ${ibmPlexMono.variable}`}
-    >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0"
-        />
-      </head>
-      <body className="bg-brand-green overflow-x-hidden">
-        <TypeBackground />
-        <main className="relative z-10">
-          {children}
-        </main>
-      </body>
+    <html lang="en" className={arimo.variable}>
+      <body>{children}</body>
     </html>
   )
 }

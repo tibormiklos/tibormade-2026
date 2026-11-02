@@ -1,16 +1,20 @@
 # tibormade-2026 — Context
 
-Personal portfolio site (tibormade.com). Next.js (app router), deployed via Vercel/GitHub.
+Personal portfolio site (tibormade.com). Next.js 15 static export (`output: 'export'`, `trailingSlash: true`), deployed by copying `out/` to the IONOS webspace via Transmit.
 
-## What's here
-- `app/page.tsx`, `layout.tsx`, `globals.css` — single-page portfolio
-- Hero: "TIBORMADE". Bio frames Tibor as a British-Hungarian audio-visual artist on the Isle of Man — design and sound are one practice, not two careers.
-- Dark monochrome aesthetic. Type stack: Special Gothic Expanded One + Fraunces italic light.
-- References: Rick Rubin (brand model), clairerousay.com (structural/tonal).
-- Copy structure: third-person human section + GEO-optimised section.
-- Built via Claude Code + Figma MCP + GitHub/Vercel.
+## Shape (redesign-list branch, Nov 2026)
+- One long list of projects on a yellow background, modelled on the MUDE Lisbon newsletter. Bio is the first item. Every item is a closed drawer.
+- Each entry is a markdown file in `content/entries/` — frontmatter (`title`, `kind`, `date`, `image`, `imageAlt`, `links`) plus body text. Filename = URL slug. List order = `date` descending; `pinned: true` sits on top.
+- An entry with no body, image or links renders as a plain row; adding any of them turns it into a drawer with its own URL (`/slug/`), generated at build time.
+- Opening a drawer rewrites the URL and tab title in place; loading `/slug/` directly opens that drawer.
+- Type: system Helvetica Neue, falling back to Arimo (Google Fonts). Colour/size tokens in `app/globals.css` are placeholders until matched to the Figma frame.
+
+## Files
+- `lib/entries.ts` — reads and renders the markdown
+- `components/EntryList.tsx`, `components/Drawer.tsx`
+- `app/page.tsx` (list), `app/[slug]/page.tsx` (per-entry pages + metadata)
+- `public/tibor.md` — markdown summary for AI agents, linked from `<head>` only
 
 ## Related
-- The sound/music side of the same brand is a separate project: `~/developer/tibormade/quiet-circle2026/`
-- Vault project hub: `vault/projects/tibormade-2026/_index.md` (mirrors this folder 1:1)
-- Vault skill: `vault/Skills/figma.md`
+- Vault project hub: `vault/projects/tibormade-2026/_index.md`
+- Figma: https://www.figma.com/design/J4SERehfVlI6YC17u9nl8T/Tibormade-2026?node-id=452-583
