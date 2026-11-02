@@ -13,4 +13,4 @@ images:
 
 Tibor and Jim Rawson played Full Moon Festival as Busy Lady for the second year running.
 
-An improvised live set: electronic music somewhere between dub and ambient, built on the spot from a Eurorack setup.
+Improvised from start to finish: electronic music somewhere between dub and ambient, built on the spot on a Eurorack.

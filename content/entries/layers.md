@@ -14,8 +14,8 @@ links:
     href:
 ---
 
-*Layers* considers how sounds, memories and moments accumulate without fully replacing one another. Each new element alters what is already present: a rhythm changes the meaning of a sustained tone; a voice brings the human body into an abstract space; silence reveals details that density had concealed.
+*Layers* is the album of Organism II, made for St Maughold's Church on the Isle of Man.
 
-The work develops through overlap and gradual transformation. Its materials can be heard as surfaces, but also as histories: different times and places remaining active within the same field of sound. Listening becomes an act of moving between them, noticing not only the individual parts but the relationships that form at their edges.
+Over several weeks Tibor recorded in and around the church: wind through the churchyard, birdsong, stone, wood, the organ, and Lauren Gray's voice. The recordings were worked on in the studio and then played back through the church's own acoustic, so the building is in every sound. The result is one circular piece with no fixed beginning or end.
 
-As part of Tibor's wider practice, *Layers* draws attention to sound as something spatial and remembered. It invites the listener to stay with complexity long enough for its quieter structures to emerge.
+It was first heard as an installation during Maughold Week 2026, playing continuously in the church. The album is coming soon.

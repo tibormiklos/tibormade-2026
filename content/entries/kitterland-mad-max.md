@@ -10,7 +10,7 @@ links:
     href: https://www.erinartscentre.com/news/kitterland-to-soundtrack-mad-max-for-mananan/
 ---
 
-For the 2024 Mananan Festival at the Erin Arts Centre in Port Erin, Kitterland improvised a live score to *Mad Max*. The film ran silently on screen and the trio played to it, somewhere between a trip to the cinema and a sit-down concert.
+For the 2024 Mananan Festival at the Erin Arts Centre in Port Erin, Kitterland improvised a live score to *Mad Max*. The film ran silent on the screen and the trio played to it, somewhere between a night at the cinema and a sit-down gig.
 
 Slow and dreamlike, and loud when the film asked for it, the set was built on analogue modular synths, loopers, guitars, bass and voice.
 

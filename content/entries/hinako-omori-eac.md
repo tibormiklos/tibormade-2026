@@ -18,8 +18,8 @@ links:
     href: https://www.wavesofwonder.im/
 ---
 
-On 8 May 2026 Tibor opened for Hinako Omori at the Erin Arts Centre in Port Erin, in a night presented by Waves of Wonder.
+On 8 May 2026 Tibor opened for Hinako Omori at the Erin Arts Centre in Port Erin, on a night put on by Waves of Wonder.
 
-Omori, the London-based Japanese composer and producer, builds her music from synthesisers, field recordings, voice and piano. Tibor's solo set was the way in: a quieter room before hers.
+Omori, a Japanese composer and producer based in London, makes her music with synthesisers, field recordings, voice and piano. Tibor's solo set was the way in: a quieter room before hers.
 
-Reviewing the evening for Isle of Man Today, Sadie Gilbert wrote that his performance "perfectly complemented what was to come".
+Reviewing the night for Isle of Man Today, Sadie Gilbert wrote that his set "perfectly complemented what was to come".

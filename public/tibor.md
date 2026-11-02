@@ -1,83 +1,87 @@
 # Tibor Miklós — TIBORMADE
 
-Tibor Miklós is a British-Hungarian designer and sound artist based on the Isle of Man, working
-internationally across the UK and Europe. He works under the name Tibor and operates his practice
-under the umbrella brand TIBORMADE — for whom working as a designer and a sound artist are not
-separate careers but two expressions of the same inner process.
+Tibor Miklós is a British-Hungarian sound and visual artist on the Isle of Man. His work starts with
+listening to a place for long enough that it starts talking back.
 
-His approach is unhurried by nature, not circumstance. Ideas are allowed to settle, to pass through
-a filter, and to surface in their own time. He carries a distinctly European outlook into everything
-he makes, and works with the unhurried focus of a life artist from a small island in the Irish Sea.
+Most of what he makes is one of two things.
 
-## Design
+The first is music written for a particular place. A chapel, a church, a stretch of coast: the
+building or the landscape becomes the instrument. He records what is already there, captures how the
+room answers a sound, then builds the piece from that and nothing else.
 
-Tibor specialises in UX and product design, brand identity, design systems, and generative code. He
-works with global brands across technology, automotive, and fintech, building digital products and
-brand identities that feel whole and considered rather than assembled from parts.
+The second is the listening experience. The finished piece goes back to the place it came from and
+plays there, so people can sit in the building and hear it in the room it was written for. Usually
+there is no start and no end. People come in, stay as long as they like, and go.
 
-- **2020–present** — Associate Design Director, Critical Mass / Omnicom
-- **2024–present** — Product Design, Tandem
+He keeps the tools simple: a field recorder, a modular synth, a film camera, pen and ink. Sound
+comes before music. Ideas are left alone until they are ready, and what comes out is usually simpler
+than what went in, and more alive.
 
-## Sound & Music
+He also plays live: film scores with Kitterland, improvised electronics with Busy Lady, and solo
+sets on modular. He carries a European outlook into a practice rooted on a small island in the
+Irish Sea.
 
-As a sound artist and musician, Tibor works across sonic identity, sound design, sound installation,
-live performance, and music production. He composes sound and music for digital products and film,
-performs live film scores, and releases recorded work spanning ambient, electronic, improvised, and
-experimental forms, both under his own name and through ongoing collaborations. TIBORMADE also began
-as a record label and now serves as the unified name for his combined design and sound practice.
+## The Organism series
 
-### The Organism series
+Pieces made for one specific building. Everything in each piece was recorded inside that building,
+then passed back through its own impulse response, so the room shapes every sound. Each is first
+heard as a listening experience inside the building itself, then released as an album with the
+impulse response included, so other musicians can put their own work in the same room.
 
-A series of site-specific sound compositions that treat architecture as a living instrument and
-places as collaborators. Each work is built entirely from recordings made within a single building,
-combined with the space's own impulse response — its acoustic fingerprint — so the building itself
-shapes every sound in the piece.
+- **Organism I — Agneash** (2025): the Methodist chapel at Agneash, Isle of Man. Seven movements
+  from the harmonium, wooden pews, footsteps and the air in the room. Presented in the chapel in
+  August 2025, released as the album *Agneash*.
+- **Organism II — Layers** (2026): St Maughold's Church, Isle of Man, for Maughold Week 2026. Wind
+  through the churchyard, birdsong, stone, wood, the organ, and Lauren Gray's voice. One circular
+  piece with no fixed beginning or end, played continuously in the church through Maughold Week.
+  Album coming soon.
 
-- **Organism I — Agneash** (2025): created for the Methodist Chapel in Agneash, Isle of Man. Seven
-  movements built from the harmonium, wooden pews, footsteps, air, and silence.
-- **Organism II — Layers** (2026): created for St Maughold's Church, Isle of Man, for Maughold Week
-  2026. Built from wind, birdsong, stone, wood, the organ, and the human voice, with vocal
-  improvisation by Lauren Gray. An album release is planned; the listening experience premiered as
-  a continuous installation during Maughold Week.
+## Universal Magic
 
-### Timeline
+As a multidisciplinary audio and visual artist, Tibor is interested in how technology is shaping the
+future of creativity and art. Universal Magic is his ongoing experimental audiovisual practice, made
+with other artists, which responds to and challenges the way we create and consume culture and art
+in an age of rapid technological change.
+
+## Work
 
 **2026**
 - Tibor x Maughold: Layers — Album (coming soon)
-- Maughold Listening Experience — Organism II, sound installation
-- Tibor supports Hinako Omori at EAC — Live
+- Maughold Listening Experience — Organism II, sound installation, St Maughold's Church
+- Tibor supports Hinako Omori at EAC — Live, Erin Arts Centre, 8 May
 
 **2025**
 - Boxes (Live) — Live album
-- Tibor performs Boxes at Resonate — Live
-- Kitterland supports Portico Quartet — Live
+- Tibor performs Boxes at Resonate — Live, Laxey Working Men's Institute
+- Kitterland supports Portico Quartet — Live, Kings Court Theatre, Castletown, 13 September
 - Tibor x Agneash: Organism I — Album
-- Agneash listening experience — Organism I, sound installation
-- Folyam I. — EP with Jeff Jepson
+- Agneash Listening Experience — Organism I, sound installation, Agneash Methodist Chapel
+- Soundology x Tibor: Plant Orchestra — Live, The Laxey Glen, with Amy Howse
+- Folyam I. — EP, J Jepson & T Miklós
 
 **2024**
-- Mineral — Album
-- Kitterland x Mad Max at EAC — Live film score
-- Kitterland x Cornelia: Listen at Kensington Arts — Film screening
-- Busy Lady LIVE at Full Moon Festival — Live
+- Mineral — Album, improvised Eurorack pieces
+- Kitterland x Mad Max at EAC — Live film score, Mananan Festival, 25 June
+- Kitterland x Cornelia: Listen at Kensington Arts — Film screening and Q&A, 13 June
+- Busy Lady live at Full Moon Festival — Live
 
 **2023**
 - Kitterland: 2121 — Short film
-- Busy Lady LIVE at Full Moon Festival — Live
+- Busy Lady live at Full Moon Festival — Live
 
 **2022**
-- Partial Seaview — EP
+- Partial Seaview — EP, analogue synthesis recorded in Port Erin
 - Kitterland x Zabriskie Point at Laxey Institute — Live score
 
 **2019–2022**
 - Landscapes with Busy Lady — 1020 Radio residency
-- Busy Lady LIVE at Dark Horse Festival — Live
+- Busy Lady live at Dark Horse Festival — Live
 
 **Archived**
 - VEIF: One High Church — Album
-- Gegen den uhrzeigersinn — Berlin Ringbahn Soundtrack
-- Veif Live @ NBI Berlin — Live
-- Various artists: Goodbye! — TBRMD label compilation
+- Gegen den Uhrzeigersinn — Berlin Ringbahn soundtrack
+- VEIF live at NBI Berlin — Live
+- Various artists: Goodbye! — TIBORMADE label compilation
 - TIBORMADE Records — Label archive
 
 ## Collaborations
@@ -85,25 +89,28 @@ shapes every sound in the piece.
 Improvisation is a delicate, almost telepathic form of communication. It encourages participants to
 take new steps and find new expressions.
 
-- **J Jepson & T Miklós** — inspired by ambient country music, this duo started in 2024 and has been
-  releasing work from 2025. Sparse, textured records that sit somewhere between folk memory and
-  electronic drift.
-- **Kitterland** — audio-visual collective with Joff Whitten. Improvised music for film — released *2121*
-  in 2023, then live scored Zabriskie Point and Mad Max.
-- **Busy Lady** — ambient dub and footwork duo with Jim Rawson. Eurorack-based setup. Played festivals and
-  held a residency on 1020 Bristol radio.
+- **Kitterland** — Tibor and Joff Whitten, with filmmaker Anthony Dalton. Improvised music for film
+  on analogue synths, loop pedals, guitars and voice. Released *2121* in 2023, then live scored
+  *Zabriskie Point* and *Mad Max*, and opened for Portico Quartet in 2025.
+- **Busy Lady** — Tibor and Jim Rawson. Ambient dub and footwork built on a Eurorack. Full Moon
+  Festival 2023 and 2024, Dark Horse Festival, and a residency on 1020 Radio in Bristol.
+- **J Jepson & T Miklós** — a duo that started in 2024 from ambient country music. Sparse, textured
+  records somewhere between folk memory and electronic drift. *Folyam I.* (2025).
+- **Soundology** — Amy Howse, sound artist and sound therapist. Plant Orchestra (2025) and the
+  Portico Quartet bill.
 
 ## Links
 
+- Site: https://tibormade.com
 - Bandcamp: https://tibor.bandcamp.com/
 - Soundcloud: https://soundcloud.com/tbrmd/
 - Instagram: https://www.instagram.com/tibormade/
-- LinkedIn: https://www.linkedin.com/in/tibormiklos/
 
 ## Contact
 
-Tibor takes on design and sound projects with brands, founders, and cultural collaborators.
-Enquiries: tibor@tibormade.com
+Tibor takes on commissions for music written for specific places, listening experiences, live
+performance and audiovisual collaboration.
+tibor@tibormade.com
 
 ---
 © Tibor Miklós / TIBORMADE

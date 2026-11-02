@@ -7,6 +7,6 @@ images:
     alt: Mineral — album cover
 ---
 
-*Mineral* is an album of improvised pieces recorded on a Eurorack modular system.
+*Mineral* is an album of improvised pieces played on a Eurorack modular.
 
-The concept is mining: digging into the subsoil of electricity to find the sound held there. Each piece works like a descent, cutting down through the signal to see what comes up.
+The idea was mining. Electricity has a subsoil, and somewhere down in it there is sound. Each piece digs into the signal to see what comes up.

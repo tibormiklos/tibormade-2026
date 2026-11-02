@@ -13,6 +13,4 @@ images:
     alt: Flower projections behind the stage at Resonate
 ---
 
-Resonate was an evening of experimental music at the Laxey Working Men's Institute, bringing together a projectionist from Coastal Electronauts and a line-up of local artists.
-
-Tibor headlined with a live performance of *Boxes*.
+Resonate was a night of experimental music at the Laxey Working Men's Institute, with a projectionist from Coastal Electronauts lighting the room and a line-up of local artists. Tibor headlined with a live set of *Boxes*.

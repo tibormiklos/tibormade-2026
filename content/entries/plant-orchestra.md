@@ -14,8 +14,8 @@ links:
     href: https://www.mwt.im/node/2992
 ---
 
-The closing event of Amy Howse's year as Biosphere Artist in Residence with the Manx Wildlife Trust, held at The Laxey Glen.
+The last night of Amy Howse's year as Biosphere Artist in Residence with the Manx Wildlife Trust, at The Laxey Glen.
 
-Amy, who works as Soundology, and Tibor performed with living plants: biofeedback sensors read the plants' signals and turned them into sound in real time, played alongside gongs, crystal bowls and other sound bath instruments. The evening also premiered Amy's audio-visual piece *Sonisphere: The Hidden Score*, built from the island's soundscapes, community voices, plant sonification and footage of the Manx landscape.
+Amy, who works as Soundology, and Tibor played with living plants. Sensors on the plants picked up their electrical signals and turned them into sound as it happened, alongside gongs, crystal bowls and the rest of Amy's sound bath kit. The night also premiered Amy's audiovisual piece *Sonisphere: The Hidden Score*, made from the island's soundscapes, local voices, plant sonification and film of the Manx landscape.
 
-The residency was delivered with UNESCO Biosphere Isle of Man and supported by the Isle of Man Arts Council.
+The residency was run with UNESCO Biosphere Isle of Man and supported by the Isle of Man Arts Council.

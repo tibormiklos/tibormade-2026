@@ -10,6 +10,6 @@ links:
     href: https://youtu.be/x7MnYzisUX0
 ---
 
-*2121* is Kitterland's first film: a live, improvised set recorded at the Sound Café, set against views of the Isle of Man from sunrise to sunset. Released in 2023, it has been screened across the island and beyond.
+*2121* is Kitterland's first film: a live, improvised set recorded at the Sound Café, cut against the Isle of Man from sunrise to sunset. It came out in 2023 and has been screened on the island and beyond since.
 
-Kitterland is Tibor Miklós and Joff Whitten, working with filmmaker Anthony Dalton, making improvised cinematic music with analogue synths, looping pedals, guitars and voice.
+Kitterland is Tibor and Joff Whitten, with filmmaker Anthony Dalton, making improvised music for film with analogue synths, loop pedals, guitars and voice.

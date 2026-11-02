@@ -14,4 +14,4 @@ links:
     href:
 ---
 
-J Jepson & T Miklós is a duo inspired by ambient country music, started in 2024 and releasing work from 2025. Sparse, textured records that sit somewhere between folk memory and electronic drift.
+J Jepson & T Miklós is a duo that started in 2024 and began releasing in 2025. The starting point was ambient country music: sparse, textured records somewhere between folk memory and electronic drift.

@@ -7,6 +7,6 @@ images:
     alt: Kitterland x Zabriskie Point
 ---
 
-Tibor and Joff Whitten, as Kitterland, improvised a live soundtrack at the Laxey Institute to one of Tibor's favourite films, Michelangelo Antonioni's *Zabriskie Point* (1970).
+Kitterland, Tibor and Joff Whitten, improvised a live soundtrack at the Laxey Institute to *Zabriskie Point*, Antonioni's 1970 film and one of Tibor's favourites.
 
-Kitterland's music belongs to what they call the slow music movement: ideas take time to form, develop and grow live in the moment, played against the film on screen.
+Kitterland call what they do slow music: ideas are given time to form and grow in the moment, played against the film on the screen behind them.

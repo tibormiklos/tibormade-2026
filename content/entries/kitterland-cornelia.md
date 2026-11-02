@@ -7,6 +7,6 @@ images:
     alt: Kitterland 2121 and Cornelia Listen — film screening and Q&A, Kensington Arts Theatre
 ---
 
-A listening evening at the Kensington Arts Theatre in Douglas on 13 June 2024. Kitterland screened their film *2121*, and Cornelia launched the music video for her song *Listen (Eaishtagh)*. The night closed with a Q&A.
+An evening at the Kensington Arts Theatre in Douglas on 13 June 2024. Kitterland screened *2121*, Cornelia launched the video for her song *Listen (Eaishtagh)*, and then everyone sat down for a Q&A.
 
 Supported by the Isle of Man Arts Council.

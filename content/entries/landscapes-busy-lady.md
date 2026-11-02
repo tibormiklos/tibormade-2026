@@ -10,4 +10,4 @@ images:
     alt: Two faces made from slate, driftwood and pebbles
 ---
 
-Busy Lady is an ambient dub and footwork duo with Jim Rawson, built around a Eurorack setup. The duo has played festivals and held a residency on 1020 Bristol radio.
+Busy Lady is Tibor and Jim Rawson: ambient dub and footwork built on a Eurorack. The duo has played festivals and held a residency on 1020 Radio in Bristol.

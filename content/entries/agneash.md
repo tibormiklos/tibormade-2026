@@ -11,8 +11,8 @@ links:
     href: https://tibor.bandcamp.com/album/agneash
 ---
 
-*Agneash* begins with a place, but it is not an attempt to describe that place from a distance. It approaches location through attention: listening for atmosphere, memory and the less visible forces that give an environment its character.
+*Agneash* is the album of Organism I, the first of Tibor's pieces made for one specific building.
 
-The music unfolds as a form of sonic archaeology. Tones gather, shift and recede; details appear at the edge of perception; space is felt through resonance rather than mapped through image. What emerges is not a fixed portrait, but an encounter between an environment and the act of listening to it.
+Everything on it was recorded inside the Methodist chapel at Agneash, a small village in the hills above Laxey: the harmonium, the wooden pews, footsteps, the air in the room. Those sounds went into the studio, were worked on, and were then passed back through the chapel's own acoustic so the building shapes every note. Seven slow movements. Nothing on the record came from anywhere else.
 
-Within Tibor's wider practice, *Agneash* reflects an ongoing interest in how sound can hold both personal memory and shared place. It asks what becomes audible when composition begins not with a statement, but with sustained attention.
+The release includes the chapel's impulse response, so other musicians can put their own work inside the same room.
