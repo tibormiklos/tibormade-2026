@@ -12,7 +12,6 @@
   --size-text: 24px;
   --size-label: 18px;
   --space: 20px;
-  --max: 1280px;
 }
 
 html,
@@ -33,8 +32,7 @@ a {
 
 .entries {
   list-style: none;
-  max-width: var(--max);
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
