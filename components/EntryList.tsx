@@ -39,6 +39,18 @@ function Body({ entry }: { entry: Entry }) {
             })}
           </ul>
         )}
+        {entry.credit && (
+          <p className="entry-credit">
+            Photos:{' '}
+            {entry.credit.href ? (
+              <a href={entry.credit.href} target="_blank" rel="noopener noreferrer">
+                {entry.credit.label}
+              </a>
+            ) : (
+              entry.credit.label
+            )}
+          </p>
+        )}
       </div>
       {entry.images.length > 0 && (
         <div className="entry-media">

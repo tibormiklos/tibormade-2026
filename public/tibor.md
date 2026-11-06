@@ -34,7 +34,7 @@ impulse response included, so other musicians can put their own work in the same
 - **Organism II — Layers** (2026): St Maughold's Church, Isle of Man, for Maughold Week 2026. Wind
   through the churchyard, birdsong, stone, wood, the organ, and Lauren Gray's voice. One circular
   piece with no fixed beginning or end, played continuously in the church through Maughold Week.
-  Album coming soon.
+  Released as an album on 6 November 2026: https://tibor.bandcamp.com/album/layers-organism-ii
 
 ## Universal Magic
 
@@ -46,7 +46,7 @@ in an age of rapid technological change.
 ## Work
 
 **2026**
-- Tibor x Maughold: Layers — Album (coming soon)
+- Tibor x Maughold: Layers (Organism II) — Album
 - Maughold Listening Experience — Organism II, sound installation, St Maughold's Church
 - Tibor supports Hinako Omori at EAC — Live, Erin Arts Centre, 8 May
 

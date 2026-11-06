@@ -25,6 +25,8 @@ export interface Entry {
   images: EntryImage[]
   html: string
   links: EntryLink[]
+  // Who took the photos; href is optional.
+  credit?: { label: string; href?: string }
   hasContent: boolean
 }
 
@@ -72,6 +74,7 @@ function readEntry(file: string) {
     // External links in the copy open in a new tab, like the links list.
     html: html.replace(/<a href="http/g, '<a target="_blank" rel="noopener noreferrer" href="http'),
     links,
+    ...(data.credit?.label && { credit: { label: data.credit.label, href: data.credit.href || undefined } }),
     hasContent: Boolean(body || images.length || links.length),
   }
   return { entry, pinned: Boolean(data.pinned), date }

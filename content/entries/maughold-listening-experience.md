@@ -2,6 +2,9 @@
 title: Maughold Listening Experience
 kind: Sound installation
 date: 2026-11
+links:
+  - label: Bandcamp
+    href: https://tibor.bandcamp.com/album/layers-organism-ii
 images:
   - src: /entries/maughold-listening-experience/maughold-1.jpg
     alt: People listening in the pews of St Maughold's Church

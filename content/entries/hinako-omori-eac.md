@@ -11,11 +11,12 @@ images:
     alt: Hinako Omori and Tibor beside the piano
   - src: /entries/hinako-omori-eac/hinako-4.jpg
     alt: Hinako Omori performing at the Erin Arts Centre
+credit:
+  label: Waves of Wonder
+  href: https://www.wavesofwonder.im/
 links:
   - label: Review, Isle of Man Today
     href: https://www.iomtoday.co.im/news/entertainment/why-hinako-omori-was-the-perfect-start-to-my-concert-resolution-906513
-  - label: "Photos: Waves of Wonder"
-    href: https://www.wavesofwonder.im/
 ---
 
 On 8 May 2026 Tibor opened for Hinako Omori at the Erin Arts Centre in Port Erin, on a night put on by Waves of Wonder.

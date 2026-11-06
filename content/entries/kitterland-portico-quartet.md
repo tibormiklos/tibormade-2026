@@ -11,6 +11,9 @@ images:
     alt: Kitterland playing in front of the screen
   - src: /entries/kitterland-portico-quartet/portico-4.jpg
     alt: "Poster: Portico Quartet, Kitterland and Soundology, 13 September 2025"
+credit:
+  label: Waves of Wonder
+  href: https://www.wavesofwonder.im/
 links:
   - label: Isle of Man Today
     href: https://www.iomtoday.co.im/news/entertainment/portico-quartet-to-headline-concert-presented-by-waves-of-wonder-initiative-807922
